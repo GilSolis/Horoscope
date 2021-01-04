@@ -4,11 +4,22 @@
 }
 
 body {
-  background-color: goldenrod;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
 }
 
 #horoscope {
-  height: 200px;
-  width: 300px;
-  background-color: lightpink;
+  margin: 0 auto;
+  margin-top: 5%;
+  height: 40vh;
+  width: 40vw;
+  border: 40px solid transparent;
+  border-image: url(https://image.flaticon.com/icons/svg/648/648787.svg);
+  border-image-slice: 100%;
+  border-image-width: 60px;
+}
+
+.container {
+  text-align: center;
+  margin: 3%;
 }
