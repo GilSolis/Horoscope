@@ -1,11 +1,12 @@
-document.getElementById('toggle').addEventListener('click', toggleHoro)
+document.getElementById('toggle').addEventListener('click', toggleHoro);
 document.getElementById("dateInput").addEventListener("change", birthday);
+document.getElementById('again').addEventListener('click', searchAgain);
 
-let dayOfBirth;
-// let dateEntered = new Date(dayOfBirth);
+// let dayOfBirth;
+
 
 function birthday() {
-    dayOfBirth = this.value;
+    let dayOfBirth = this.value;
     let dateEntered = new Date(dayOfBirth);
     month = dateEntered.getMonth()
     day = dateEntered.getDate()
@@ -76,9 +77,7 @@ function birthday() {
 
 
 }
-
 function toggleHoro() {
-
     let x = document.getElementById("horoscope");
     if (x.style.display === "none") {
         x.style.display = "block";
@@ -87,3 +86,15 @@ function toggleHoro() {
     }
 }
 
+function searchAgain() {
+
+    let x = document.getElementById("horoscope");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    document.getElementById('dateInput').value = '';
+    document.querySelector("p").innerHTML = 'Enter your birthday, silly!'
+    document.getElementById("horoscope").style.border = 'none'
+}
